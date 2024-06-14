@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathology Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        header {
+            width: 100%;
+            background-color: #4CAF50;
+            border: 2px solid greenyellow;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .buttons {
+            margin: 2rem 0;
+            text-align: center;
+            text-decoration: none;
+        }
+        .buttons button {
+            background-color: #4CAF50;
+            border: 2px solid greenyellow;
+            border-radius: 25px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .buttons button:hover {
+            background-color: #45a049;
+            transform: scale(1.1);
+        }
+        .buttons .whatsapp {
+            background-color: #25D366;
+        }
+        .buttons .whatsapp:hover {
+            background-color: #1ebe57;
+        }
+        .buttons .whatsapp:active {
+            transform: scale(1.2);
+        }
+        .slideshow {
+            flex-grow: 1;
+            width: 100%;
+            position: relative;
+        }
+        .slideshow img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+        .slideshow img.active {
+            opacity: 1;
+        }
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #4CAF50;
+            border: 2px solid greenyellow;
+            color: white;
+            position: relative;
+        }
+        @media (max-width: 768px) {
+            header, footer {
+                font-size: 1.5rem;
+            }
+            .buttons button {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>PATHOLOGY MANAGEMENT SYSTEM</header>
+
+    <div class="buttons">
+        <button >  <a href="login.html">Login</a></button>
+        <button><a href="TO DO/index.html">TO DO</a></button>
+        <button><a href="calc/calculator.html">Calculator</a></button>
+        <button class="whatsapp" onclick="openWhatsApp()">WhatsApp</button>
+    </div>
+
+    <div class="slideshow">
+        <img src="https://wallpapercave.com/wp/wp2189205.jpg" class="active" alt="Image 1">
+        <img src="https://th.bing.com/th/id/OIP.zoi9-axp2VWN3G6eovPgLwHaFj?rs=1&pid=ImgDetMain" alt="Image 2">
+        <img src="https://e0.pxfuel.com/wallpapers/157/811/desktop-wallpaper-tzar-labs-medical-lab.jpg" alt="Image 3">
+    </div>
+
+    <footer>
+        <p>All rights reserved 2024 to 2025 PATHOLOGY MANAGEMENT</p>
+        <p>MADE WITH <span style="color: red;">❤️</span> WASIM AKHTAR</p>
+    </footer>
+
+    <script>
+        function openWhatsApp() {
+            window.open('https://wa.me/', '_blank');
+        }
+
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slideshow img');
+        const totalSlides = slides.length;
+
+        function showSlides() {
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active');
+                if (index === slideIndex) {
+                    slide.classList.add('active');
+                }
+            });
+            slideIndex = (slideIndex + 1) % totalSlides;
+            setTimeout(showSlides, 3000);
+        }
+
+        document.addEventListener('DOMContentLoaded', showSlides);
+    </script>
+
+</body>
+</html>

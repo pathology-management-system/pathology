@@ -1,0 +1,322 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathology Management System - Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        header {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 2rem;
+            font-weight: bold;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        .main-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 70px; /* height of the header */
+            margin-bottom: 70px; /* height of the footer */
+        }
+        .login-container {
+            background-color: white;
+            padding: 2rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .login-container h2 {
+            margin-bottom: 1rem;
+        }
+        .login-container label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .login-container input {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .login-container button {
+            background-color: #4CAF50;
+            border: 2px solid greenyellow;
+            border-radius: 25px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            width: 100%;
+        }
+        .login-container button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #4CAF50;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>PATHOLOGY MANAGEMENT SYSTEM</header>
+
+    <div class="main-content">
+        <div class="login-container">
+            <h2>Login</h2>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password">
+            <button onclick="login()">Login</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>All rights reserved 2024 to 2025 PATHOLOGY MANAGEMENT</p>
+        <p>MADE WITH <span style="color: red;">❤️</span> WASIM AKHTAR</p>
+    </footer>
+
+    <script>
+        const defaultUsername = 'admin';
+        const defaultPassword = 'bot';
+
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === defaultUsername && password === defaultPassword) {
+                alert('Login successfully');
+                window.location.href = 'website/user/index.html'; // Replace with the actual URL to redirect
+            } else {
+                alert('Username and password are incorrect');
+            }
+        }
+    </script>
+
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathology Management System - Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        header {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 2rem;
+            font-weight: bold;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .profile-section {
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .profile-section img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .main-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 70px; /* height of the header */
+            margin-bottom: 70px; /* height of the footer */
+        }
+        .login-container, .profile-container {
+            background-color: white;
+            padding: 2rem;
+            box-shadow: 2px 0 10px greenyellow;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .login-container h2, .profile-container h2 {
+            margin-bottom: 1rem;
+        }
+        .login-container label, .profile-container label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .login-container input, .profile-container input {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .login-container button, .profile-container button {
+            background-color: #4CAF50;
+            border: 2px solid greenyellow;
+            border-radius: 25px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        .login-container button:hover, .profile-container button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #4CAF50;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        PATHOLOGY MANAGEMENT SYSTEM
+        <div class="profile-section" id="profile-section" style="display: none;">
+            <img src="" alt="Profile Photo" id="profile-photo">
+            <div>
+                <div id="profile-name"></div>
+                <div id="profile-lab"></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <div class="login-container">
+            <h2>Login</h2>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password">
+            <button onclick="login()">Login</button>
+        </div>
+        <div class="profile-container" id="profile-container" style="display: none;">
+            <h2>Welcome, <span id="user-name"></span></h2>
+            <button onclick="logout()">Logout</button>
+            <button onclick="openWorkStation()">Work Station</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>All rights reserved 2024 to 2025 PATHOLOGY MANAGEMENT</p>
+        <p>MADE WITH <span style="color: red;">❤️</span> WASIM AKHTAR</p>
+    </footer>
+
+    <script>
+        const users = {
+            'minnat': {password: 'minnat@', name: 'Md. Minnatullah', lab: 'ROYAL JANCH GHAR', photo: 'images/minnat.jpg'},
+            'haque': {password: 'haque@', name: 'Anwarul Haque', lab: 'Haque JANCH GHAR', photo: 'images/haque.jpg'},
+            'akhtar': {password: 'akhtar@', name: 'Wasim Akhtar', lab: ' AkhtarJANCH GHAR', photo: 'images/akhtar.jpg'}
+        };
+
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (users[username] && users[username].password === password) {
+                document.getElementById('profile-photo').src = users[username].photo;
+                document.getElementById('profile-name').textContent = users[username].name;
+                document.getElementById('profile-lab').textContent = users[username].lab;
+                document.getElementById('user-name').textContent = users[username].name;
+
+                document.querySelector('.login-container').style.display = 'none';
+                document.getElementById('profile-section').style.display = 'flex';
+                document.getElementById('profile-container').style.display = 'block';
+
+                alert('Login successfully');
+            } else {
+                alert('Username and password are incorrect');
+            }
+        }
+
+        function logout() {
+            document.querySelector('.login-container').style.display = 'block';
+            document.getElementById('profile-section').style.display = 'none';
+            document.getElementById('profile-container').style.display = 'none';
+        }
+
+        function openWorkStation() {
+            window.location.href = 'website/workstation.html'; // Replace with actual workstation URL
+        }
+    </script>
+
+</body>
+</html>
